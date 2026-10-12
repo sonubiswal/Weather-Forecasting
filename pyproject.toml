@@ -1,0 +1,25 @@
+@"
+[project]
+name = ""weather-forecasting""
+version = ""1.0.0""
+description = ""A modern desktop weather app built with PySide6 and Open-Meteo.""
+readme = ""README.md""
+requires-python = "">=3.10""
+license = { text = ""MIT"" }
+authors = [{ name = ""Sonu Biswal"" }]
+dependencies = [
+    ""PySide6>=6.5,<7"",
+    ""requests>=2.31,<3"",
+    ""urllib3>=2.0,<3"",
+]
+
+[project.scripts]
+weather = ""preview.py --gui:main""
+
+[build-system]
+requires = [""setuptools>=68""]
+build-backend = ""setuptools.build_meta""
+
+[tool.setuptools.packages.find]
+where = [""src""]
+"@ | Out-File -Encoding utf8 pyproject.toml
