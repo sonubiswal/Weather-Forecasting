@@ -24,7 +24,7 @@
 
 <br/>
 
-<img src="assets/screenshots/main.png" width="820" alt="Weather Forecasting main window"/>
+<img src="assets/screenshots/main.png?v=2" width="820" alt="Weather Forecasting main window"/>
 
 </div>
 
@@ -109,7 +109,7 @@ Most weather apps present one model's output as if it were certain. But models d
 <table>
   <tr>
     <td align="center">
-      <img src="assets/screenshots/forecast.png" width="560" alt="Hourly strip, 5-day outlook, and forecast accuracy"/>
+      <img src="assets/screenshots/forecast.png?v=2" width="560" alt="Hourly strip, 5-day outlook, and forecast accuracy"/>
       <br/><sub><b>⏱️ Hourly strip · 5-day outlook · Forecast accuracy</b></sub>
     </td>
   </tr>
