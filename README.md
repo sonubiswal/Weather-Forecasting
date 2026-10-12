@@ -129,21 +129,24 @@ Most weather apps present one model's output as if it were certain. But models d
 
 ```mermaid
 flowchart LR
-    A([🔍 City search<br/>or geolocation]) --> B[fetcher.py]
-    B -->|parallel| C1[ECMWF IFS]
-    B -->|parallel| C2[ECMWF AIFS]
-    B -->|parallel| C3[GFS]
-    B -->|parallel| C4[ICON]
-    C1 & C2 & C3 & C4 --> D{{Ensemble merge<br/>median + spread}}
-    D --> E[🚨 alerts.py]
-    D --> F[📊 scoring.py]
-    E --> G([🖥️ ui.py + widgets.py])
+    A["City search<br/>or geolocation"] --> B["fetcher.py"]
+    B --> C1["ECMWF IFS"]
+    B --> C2["ECMWF AIFS"]
+    B --> C3["GFS"]
+    B --> C4["ICON"]
+    C1 --> D["Ensemble merge<br/>median + spread"]
+    C2 --> D
+    C3 --> D
+    C4 --> D
+    D --> E["alerts.py"]
+    D --> F["scoring.py"]
+    D --> G["ui.py + widgets.py"]
+    E --> G
     F --> G
-    D --> G
 
-    style A fill:#1b5fa8,color:#fff,stroke:none
-    style D fill:#8b5cf6,color:#fff,stroke:none
-    style G fill:#22c55e,color:#fff,stroke:none
+    style A fill:#1b5fa8,color:#fff
+    style D fill:#8b5cf6,color:#fff
+    style G fill:#22c55e,color:#fff
 ```
 
 | Step | What happens |
